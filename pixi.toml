@@ -1,0 +1,19 @@
+[workspace]
+authors = ["Caryn Geady <caryn@geady.com>"]
+channels = ["conda-forge"]
+name = "BINF-5507-Summer2026"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.14.4,<3.15"
+pip = ">=26.1.1,<27"
+ipykernel = ">=7.2.0,<8"
+matplotlib = ">=3.10.9,<4"
+seaborn = ">=0.13.2,<0.14"
+scikit-learn = ">=1.8.0,<2"
+scipy = ">=1.17.1,<2"
+numpy = ">=2.4.4,<3"
+pandas = ">=3.0.3,<4"
