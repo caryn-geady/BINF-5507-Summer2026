@@ -35,7 +35,7 @@ def simple_model(input_data, split_data=True, scale_data=False, print_report=Fal
 
     # if the column is not numeric, encode it (one-hot)
     for col in features.columns:
-        if features[col].dtype == 'object':
+        if features[col].dtype == 'str':
             features = pd.concat([features, pd.get_dummies(features[col], prefix=col)], axis=1)
             features.drop(col, axis=1, inplace=True)
 
@@ -50,7 +50,7 @@ def simple_model(input_data, split_data=True, scale_data=False, print_report=Fal
         X_test = scaler.transform(X_test)
         
     # instantiate and fit the model
-    log_reg = LogisticRegression(random_state=42, max_iter=100, solver='liblinear', penalty='l2', C=1.0)
+    log_reg = LogisticRegression(random_state=42)
     log_reg.fit(X_train, y_train)
 
     # make predictions and evaluate the model
