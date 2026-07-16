@@ -1,2 +1,4 @@
 .pixi/
 .ipynb_checkpoints/
+.env
+*solutions*
